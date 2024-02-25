@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achim Sommer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <section id="hero">
+        <div id="hero">
+            <h1>Achim Sommer</h1>
+            <div class="buttons">
+                <a href="https://github.com" class="button">GitHub</a>
+                <a href="https://shop.example.com" class="button">Shop</a>
+                <a href="#social-media" class="scroll-down" aria-label="Scroll Down"><span class="arrow-down"></span></a>
+            </div>
+        </div>
+    </section>
+    <section id="social-media">
+        <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitch.tv" class="social-icon"><i class="fab fa-twitch"></i></a>
+    </section>
+    <section id="counters">
+        <div class="counter">
+            <span class="count" data-target="8200">0</span>
+            <p>YOUTUBE ABONNENTEN</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="3035000">0</span>
+            <p>YOUTUBE VIEWS</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="420">0</span>
+            <p>VIDEOS</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="68500">0</span>
+            <p>YOUTUBE KOMMENTARE</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="168500">0</span>
+            <p>YOUTUBE WATCH TIME STUNDEN</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="2000">0</span>
+            <p>INSTAGRAM FOLLOWER</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="5200">0</span>
+            <p>FORUM MITGLIEDER</p>
+        </div>
+        <div class="counter">
+            <span class="count" data-target="4000">0</span>
+            <p>DISCORD MITGLIEDER</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+        <p>© 2024 Achim Sommer | <a href="/impressum">Impressum</a> | <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80, /* Anzahl der Partikel */
+          density: {
+            enable: true,
+            value_area: 800 /* Dichte der Partikel */
+          }
+        },
+        color: {
+          value: "#ffffff" /* Farbe der Partikel */
+        },
+        shape: {
+          type: "circle", /* Form der Partikel */
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          attract: {
+            enable: false,
+          }
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+      },
+      retina_detect: true,
+    });
+  </script>

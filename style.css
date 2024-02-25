@@ -1,0 +1,202 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.medium-text {
+    font-weight: 500;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.black-text {
+    font-weight: 900; /* Für besonders dicke Textabschnitte */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 3.5em; /* Erhöht die Schriftgröße für "Achim Sommer" */
+    margin: 0;
+    padding: 0 20px; /* Fügt seitlichen Abstand hininzu, um Textumbrüche zu vermeiden */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.button {
+    display: inline-block;
+    margin: 20px 15px; /* Erhöht den Abstand zwischen den Buttons */
+    padding: 15px 30px; /* Erhöht Padding für größere Buttons */
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 25px; /* Macht die Ecken der Buttons noch runder */
+    font-size: 1.2em; /* Erhöht die Schriftgröße in den Buttons */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+#social-media {
+    display: flex;
+    justify-content: space-around; /* Verteilt die Icons gleichmäßig */
+    align-items: center;
+    width: 100%;
+    padding: 20px 0; /* Fügt oben und unten etwas Platz hininzu */
+}
+
+.social-icon {
+    text-decoration: none;
+    color: white; /* Farbe der Icons */
+    font-size: 40px; /* Größe der Icons */
+    transition: transform 0.3s ease;
+    border-radius: 50%; /* Macht den Hintergrund kreisförmig */
+    width: 60px; /* Breite des Kreises */
+    height: 60px; /* Höhe des Kreises */
+    display: flex;
+    justify-content: center; /* Zentriert das Icon horizontal */
+    align-items: center; /* Zentriert das Icon vertikal */
+    background-color: #7D3FC7; /* Lila Hintergrundfarbe */
+    margin: 0 10px; /* Fügt einen Abstand zwischen den Icons hinzu */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+#counters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    color: white; /* Setzt die Standardtextfarbe für den gesamten Bereich auf Weiß */
+}
+
+.counter {
+    text-align: center;
+    width: 45%; /* Anpassung der Breite je nach Bedarf */
+    margin: 20px 0; /* Fügt vertikal Abstand hinzu */
+}
+
+.count {
+    font-size: 2em; /* Größe der Zahlen */
+    font-weight: bold;
+    color: white; /* Stellt sicher, dass die Zahlen in Weiß angezeigt werden */
+}
+
+.counter p {
+    color: white; /* Stellt sicher, dass die Beschreibungstexte in Weiß angezeigt werden */
+}
+
+/* Kleine Geräte (Tablets, 768px und darüber) */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: auto;
+    }
+}
+
+/* Mittlere Geräte (Desktops, 992px und darüber) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Große Geräte (große Desktops, 1200px und darüber) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: white;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    text-decoration: none; /* Entfernt Unterstreichungen von Links */
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white; /* Erstellt eine Pfeilspitze */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+footer {
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: #fff; /* Weiße Schriftfarbe */
+    text-align: center; /* Zentriert den Text */
+    padding: 20px 10px; /* Fügt oben und unten Polsterung hinzu, links und rechts minimal */
+    font-size: 16px; /* Standard Schriftgröße */
+}
+
+footer a {
+    color: #fff; /* Weiße Schriftfarbe für Links */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Fügt eine Unterstreichung beim Hover hinzu */
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    min-height: 100%; /* Setzt die minimale Höhe auf 100% der Höhe des body oder html Elements */
+    z-index: 1; /* niedrigerer z-index */
+    top: 0;
+    left: 0;
+}
+
+  
