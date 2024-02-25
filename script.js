@@ -38,3 +38,34 @@ document.querySelector('.scroll-down').addEventListener('click', function(e) {
     const nextSection = document.querySelector(this.getAttribute('href')); // Holt sich das Ziel-Element basierend auf dem href-Wert
     nextSection.scrollIntoView({ behavior: 'smooth' }); // Scrollt sanft zum Ziel-Element
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://api.github.com/users/Achim-Sommer/repos')
+        .then(response => response.json())
+        .then(data => {
+            // Sortiere die Repositories nach der Anzahl der Sterne, absteigend
+            const sortedRepos = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+            // Wähle die ersten vier Repositories
+            const topRepos = sortedRepos.slice(0, 4);
+
+            const container = document.querySelector('.repos-container');
+            topRepos.forEach(repo => {
+                const repoBox = document.createElement('div');
+                repoBox.classList.add('repo-box');
+                repoBox.innerHTML = `
+                    <h3>${repo.name}</h3>
+                    <p>${repo.description || 'Keine Beschreibung verfügbar'}</p>
+                    <div class="repo-info">
+                        <span><i class="fas fa-star"></i> ${repo.stargazers_count} Sterne</span>
+                    </div>
+                    <a href="${repo.html_url}" target="_blank" class="repo-link">Repo ansehen</a>
+                `;
+                container.appendChild(repoBox);
+            });
+        })
+        .catch(error => console.error('Fehler beim Abrufen der Repositories:', error));
+});
+
+
+

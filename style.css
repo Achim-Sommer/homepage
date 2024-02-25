@@ -123,6 +123,7 @@ body, html {
     .container {
         width: 750px;
         margin: auto;
+        color: #fff; /* Weiße Schriftfarbe */
     }
 }
 
@@ -130,6 +131,7 @@ body, html {
 @media (min-width: 992px) {
     .container {
         width: 970px;
+        color: #fff; /* Weiße Schriftfarbe */
     }
 }
 
@@ -137,6 +139,7 @@ body, html {
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+        color: #fff; /* Weiße Schriftfarbe */
     }
 }
 
@@ -182,7 +185,7 @@ footer {
 }
 
 footer a {
-    color: #fff; /* Weiße Schriftfarbe für Links */
+    color: #7D3FC7; /* Weiße Schriftfarbe für Links */
     text-decoration: none; /* Entfernt die Unterstreichung */
 }
 
@@ -199,4 +202,145 @@ footer a:hover {
     left: 0;
 }
 
-  
+.repos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Erstellt zwei Spalten mit gleicher Breite */
+    gap: 20px; /* Definiert einen Abstand zwischen den Grid-Items */
+    padding: 20px;
+    background-color: #121212; /* Dark Mode Hintergrund */
+    color: #ffffff; /* Weiße Schrift */
+}
+
+.repo-box {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.repo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Fügt Repository-Informationen Stile hinzu */
+.repo-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 0.9rem; /* Passen Sie die Größe nach Bedarf an */
+}
+
+/* Stil für Links innerhalb der Repo-Box */
+.repo-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.repo-link:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .repos-container {
+        grid-template-columns: 1fr; /* Geht zurück zu einer einzigen Spalte auf kleineren Bildschirmen */
+    }
+}
+#github-section {
+    text-align: center; /* Zentriert den Inhalt des Abschnitts */
+    color: white; /* Setzt die Textfarbe auf Weiß */
+}
+
+#github-section h2 {
+    margin-bottom: 20px; /* Fügt Abstand unter dem Titel hinzu, um Platz für die Repo-Boxen zu schaffen */
+}
+
+.repo-box h3, .repo-box p, .repo-box a {
+    margin: 10px;
+}
+
+.repo-box a {
+    display: inline-block;
+    background-color: #fff;
+    color: #6e8efb;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.repo-box a:hover {
+    background-color: #a777e3;
+    color: #fff;
+}
+
+
+
+
+
+/* Anpassungen für WebKit-Browser */
+::-webkit-scrollbar {
+    width: 12px; /* Breite des Scrollbalkens */
+}
+
+::-webkit-scrollbar-track {
+    background: #121212; /* Hintergrundfarbe des Scrollbalken-Tracks, angepasst an Ihr dunkles Design */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9b59b6; /* Lila Farbe des Scroll-Thumb */
+    border-radius: 6px; /* Rundet die Ecken des Scroll-Thumb ab */
+}
+
+/* Anpassungen für Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #9b59b6 #121212; /* Lila Scroll-Thumb und dunkler Track-Hintergrund */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Dunkler Hintergrund */
+    color: white; /* Weiße Textfarbe */
+}
+
+.navbar-brand {
+    font-size: 1.5em; /* Größere Schrift für den Markennamen */
+}
+
+.navbar-links a {
+    color: white; /* Weiße Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    font-size: 1.2em; /* Anpassbare Schriftgröße */
+    padding: 5px 10px; /* Etwas Polsterung um den Link */
+    border-radius: 5px; /* Abgerundete Ecken für Hover-Effekt */
+    transition: background-color 0.3s; /* Sanfter Übergang für Hover-Effekt */
+}
+
+.navbar-links a:hover {
+    background-color: #555; /* Dunklerer Hintergrund beim Hover */
+    color: #fff; /* Optional: Ändert die Textfarbe beim Hover */
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Versteckt Links auf kleinen Bildschirmen */
+    }
+    /* Hier könnten Sie Code für ein Hamburger-Menü hinzufügen */
+}
+.impressum-text {
+    position: relative;
+    z-index: 1; /* Stellt Text über Partikel */
+}
