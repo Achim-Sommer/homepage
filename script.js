@@ -1,35 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.count');
-    
-    const startCounter = (element) => {
-        const target = +element.getAttribute('data-target');
-        const increment = target / 200;
-
-        const updateCounter = () => {
-            const count = +element.innerText.replace('+', '');
-            if (count < target) {
-                element.innerText = `${Math.ceil(count + increment)}+`;
-                setTimeout(updateCounter, 1);
-            } else {
-                element.innerText = `${target}+`;
-            }
-        };
-
-        updateCounter();
-    };
-
-    // Intersection Observer Setup
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                startCounter(entry.target);
-                observer.unobserve(entry.target); // Stop observing the target once it's started counting
+                const element = entry.target;
+                const target = +element.getAttribute('data-target');
+                
+                // Bestimmen der Schrittgröße basierend auf der Dauer und Frequenz der Animation
+                const increment = target / (2000 / 16); // Angenommen, wir wollen, dass die Animation 2 Sekunden dauert
+                
+                const updateCounter = () => {
+                    const count = +element.innerText.replace('+', '').replace(/\./g, '');
+                    if (count < target) {
+                        // Aktualisiere den Zähler und füge Tausenderpunkte hinzu
+                        element.innerText = `${Math.ceil(count + increment).toLocaleString('de-DE')}+`;
+                        // Farbwechsel zu Lila und pulsierender Effekt
+                        element.style.color = 'purple';
+                        element.classList.add('pulse');
+                        setTimeout(updateCounter, 16); // Aktualisierung alle 16 ms für eine flüssige Animation (60 FPS)
+                    } else {
+                        element.innerText = `${target.toLocaleString('de-DE')}+`;
+                        element.classList.remove('pulse');
+                        observer.unobserve(element); // Beenden der Beobachtung nach Abschluss der Animation
+                    }
+                };
+
+                setTimeout(updateCounter, 16);
             }
         });
-    }, { threshold: 0.5 }); // Trigger when at least 50% of the element is visible
+    }, { threshold: 0.5 }); // Startet, wenn 50% des Elements sichtbar sind
 
     counters.forEach(counter => {
-        observer.observe(counter); // Start observing each counter
+        observer.observe(counter);
     });
 });
 

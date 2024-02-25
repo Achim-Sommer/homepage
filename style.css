@@ -176,6 +176,17 @@ body, html {
     }
 }
 
+// CSS für den pulsierenden Effekt
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+}
+
 footer {
     background-color: #121212; /* Dunkler Hintergrund */
     color: #fff; /* Weiße Schriftfarbe */
