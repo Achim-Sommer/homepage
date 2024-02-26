@@ -145,7 +145,7 @@ body, html {
 
 .scroll-down {
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2em;
@@ -162,19 +162,25 @@ body, html {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid white; /* Erstellt eine Pfeilspitze */
+    transition: border-top-color 0.3s ease-in-out; /* Glatter Übergang für Farbwechsel */
+}
+
+.scroll-down:hover .arrow-down {
+    border-top-color: #A020F0; /* Farbwechsel beim Hover */
 }
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
     40% {
-        transform: translateY(-20px);
+        transform: translateY(-20px) scale(1.1); /* Vergrößert den Pfeil leicht beim Springen */
     }
     60% {
-        transform: translateY(-10px);
+        transform: translateY(-10px) scale(1.05);
     }
 }
+
 
 
 @keyframes pulse {
@@ -440,4 +446,69 @@ footer a:hover {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.skills-image img {
+    animation: float 3s ease-in-out infinite;
+}
+
+#about-me .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+#about-me .profile-image img {
+    border-radius: 50%;
+    width: 300px; /* Erhöht die Größe des Bildes */
+    height: auto;
+    margin-right: 20px;
+    margin-left: 50px; /* Verschiebt das Bild etwas weiter nach rechts */
+}
+
+#about-me .about-text {
+    flex: 1;
+    text-align: left; /* Text linksbündig ausrichten */
+    padding-left: 10%; /* Erhöht den Abstand zum Bild */
+    font-size: 20px; /* Erhöht die Schriftgröße */
+    font-weight: bold; /* Macht den Text fett */
+}
+
+#about-me p, #about-me ul {
+    color: #ffffff; /* Dunklere Schriftfarbe für bessere Lesbarkeit */
+    line-height: 1.6;
+}
+
+#about-me ul {
+    list-style: none; /* Entfernt Bullet Points */
+    padding: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.profile-image img {
+    animation: float 3s ease-in-out infinite;
 }
