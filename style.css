@@ -176,7 +176,7 @@ body, html {
     }
 }
 
-// CSS für den pulsierenden Effekt
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -354,4 +354,90 @@ footer a:hover {
 .impressum-text {
     position: relative;
     z-index: 1; /* Stellt Text über Partikel */
+}
+
+#skills-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.skills {
+    flex: 1;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 20px;
+    width: 100%;
+}
+
+.skill-level {
+    background-color: #4CAF50;
+    border-radius: 8px;
+    height: 100%;
+    display: block;
+}
+
+.skills-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.skill-item h4 {
+    font-size: 20px; /* Größere Schriftgröße für die Überschrift */
+    margin-bottom: 10px; /* Etwas mehr Abstand unter der Überschrift */
+    margin: 0; /* Entfernt den Standardabstand um das <h4>-Element */
+}
+.skill-icon-and-name {
+    display: flex;
+    align-items: center; /* Zentriert die Elemente vertikal */
+    gap: 10px; /* Fügt einen Abstand zwischen Icon und Text hinzu */
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    height: 30px; /* Dickerer Balken */
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px; /* Mehr Abstand zwischen den Balken */
+}
+
+.skill-level {
+    background: linear-gradient(to right, #af6cf3, #37297d); /* Farbverlauf von hellem zu dunklem Lila */
+    border-radius: 15px;
+    height: 100%; /* Füllt den gesamten Balken aus */
+    width: 0%; /* Startet bei 0% Breite */
+    display: block;
+    transition: width 2s ease-out; /* Weiche Animation */
+}
+
+@keyframes loadSkill {
+    from { width: 0%; }
+    to { width: var(--skill-level); } /* Benutzt eine CSS-Variable für die Breite */
+}
+
+.skill-level:hover {
+    background: linear-gradient(to right, #9D50BB, #6E48AA);
+    animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }

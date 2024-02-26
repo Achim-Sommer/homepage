@@ -70,4 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.width = entry.target.getAttribute('data-width');
+            }
+        });
+    }, {threshold: 0.6}); // Startet die Animation, wenn 60% des Elements sichtbar sind
+
+    // Alle Skill-Level-Elemente beobachten
+    document.querySelectorAll('.skill-level').forEach((el) => {
+        observer.observe(el);
+    });
+});
 

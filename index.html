@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="img/fav.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -33,43 +34,79 @@
         </div>
     </section>
     <section id="social-media">
-        <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com" class="social-icon"><i class="fab fa-youtube"></i></a>
-        <a href="https://twitch.tv" class="social-icon"><i class="fab fa-twitch"></i></a>
+        <a href="https://instagram.com" class="social-icon" data-aos="fade-up"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" class="social-icon" data-aos="fade-up"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitch.tv" class="social-icon" data-aos="fade-up"><i class="fab fa-twitch"></i></a>
     </section>
+  
     <section id="counters">
-        <div class="counter">
-            <span class="count" data-target="8200">0</span>
-            <p>YOUTUBE ABONNENTEN</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="3035000">0</span>
-            <p>YOUTUBE VIEWS</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="420">0</span>
-            <p>VIDEOS</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="68500">0</span>
-            <p>YOUTUBE KOMMENTARE</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="168500">0</span>
-            <p>YOUTUBE WATCH TIME STUNDEN</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="2000">0</span>
-            <p>INSTAGRAM FOLLOWER</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="5200">0</span>
-            <p>FORUM MITGLIEDER</p>
-        </div>
-        <div class="counter">
-            <span class="count" data-target="4000">0</span>
-            <p>DISCORD MITGLIEDER</p>
-        </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="100">
+          <span class="count" data-target="8444">0</span>
+          <p>YOUTUBE ABONNENTEN</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="200">
+          <span class="count" data-target="3335000">0</span>
+          <p>YOUTUBE VIEWS</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="300">
+          <span class="count" data-target="520">0</span>
+          <p>VIDEOS</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="400">
+          <span class="count" data-target="78000">0</span>
+          <p>YOUTUBE KOMMENTARE</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="500">
+          <span class="count" data-target="198500">0</span>
+          <p>YOUTUBE WATCH TIME STUNDEN</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="600">
+          <span class="count" data-target="1900">0</span>
+          <p>INSTAGRAM FOLLOWER</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="700">
+          <span class="count" data-target="7400">0</span>
+          <p>FORUM MITGLIEDER</p>
+      </div>
+      <div class="counter" data-aos="fade-up" data-aos-delay="800">
+          <span class="count" data-target="3700">0</span>
+          <p>DISCORD MITGLIEDER</p>
+      </div>
+    </section>
+    <section id="skills-section">
+      <div class="container">
+          <div class="skills">
+              <!-- Skill #1 -->
+              <div class="skill-item">
+                <div class="skill-icon-and-name">
+                  <i class="fab fa-python"></i><h4>PYTHON</h4>
+                </div>
+                <div class="skill-bar"><span class="skill-level" data-width="70%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon-and-name">
+                  <i class="fab fa-html5"></i><h4>HTML</h4>
+                </div>
+                <div class="skill-bar"><span class="skill-level" data-width="50%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon-and-name">
+                  <i class="fa-brands fa-js"></i><h4>JAVASCRIPT</h4>
+                </div>
+                  <div class="skill-bar"><span class="skill-level" data-width="40%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon-and-name">
+                  <i class="fa-brands fa-css3"></i><h4>CSS</h4>
+                </div>
+                  <div class="skill-bar"><span class="skill-level" data-width="30%"></span></div>
+              </div>
+              <!-- Weitere Skills hinzufügen -->
+          </div>
+          <div class="skills-image">
+              <img src="img/code.gif" alt="Coding Animation">
+          </div>
+      </div>
     </section>
     <section id="github-section">
       <h2>Meine GitHub Repos</h2>
@@ -79,11 +116,14 @@
   
     <script src="script.js"></script>
     <footer>
-        <p>© 2024 Achim Sommer | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+        <p>© 2024 Achim Sommer | <a href="/impressum.html">Impressum</a> | <a href="https://forum.achimsommer.com/home/datenschutzerklaerung/">Datenschutzerklärung</a>.</p>
     </footer>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  </body>
 </html>
-
+<script>
+  AOS.init();
+</script>
 <script>
     particlesJS("particles-js", {
       particles: {
