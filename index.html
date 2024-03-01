@@ -25,7 +25,6 @@
           <a href="https://forum.achimsommer.com" target="_blank">Forum</a>
       </div>
     </nav>
-    
     <section id="hero">
         <div id="particles-js"></div>
         <div id="hero">
@@ -43,7 +42,6 @@
         <a href="https://twitch.tv" class="social-icon" data-aos="fade-up" target="_blank"><i class="fab fa-twitch"></i></a>
         <a href="https://linkedin.com" class="social-icon" data-aos="fade-up" target="_blank"><i class="fab fa-linkedin"></i></a>
     </section>
-  
     <section id="counters">
       <div class="counter" data-aos="fade-up" data-aos-delay="100">
           <span class="count" data-target="8444">0</span>
@@ -132,8 +130,6 @@
       <h2>Meine GitHub Repos</h2>
       <div class="repos-container"></div>
     </section>
-  
-  
     <script src="script.js"></script>
     <footer>
         <p>© 2024 Achim Sommer | <a href="/impressum.html">Impressum</a> | <a href="https://forum.achimsommer.com/home/datenschutzerklaerung/">Datenschutzerklärung</a>.</p>
@@ -144,69 +140,3 @@
 <script>
   AOS.init();
 </script>
-<script>
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 80, /* Anzahl der Partikel */
-          density: {
-            enable: true,
-            value_area: 800 /* Dichte der Partikel */
-          }
-        },
-        color: {
-          value: "#ffffff" /* Farbe der Partikel */
-        },
-        shape: {
-          type: "circle", /* Form der Partikel */
-        },
-        opacity: {
-          value: 0.5,
-          random: false,
-          anim: {
-            enable: false,
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#ffffff",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 3,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          attract: {
-            enable: false,
-          }
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "repulse"
-          },
-          onclick: {
-            enable: true,
-            mode: "push"
-          },
-          resize: true
-        },
-      },
-      retina_detect: true,
-    });
-  </script>
